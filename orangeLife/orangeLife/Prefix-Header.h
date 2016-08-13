@@ -41,6 +41,8 @@
 #define JKRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 //随机色
 #define JKRandomColor JKRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+//购物网址
+#define shopURL @"http://192.168.0.120/juzi/mobile/"
 
 //屏幕高度
 #define  JKScreenW  [UIScreen mainScreen].bounds.size.width

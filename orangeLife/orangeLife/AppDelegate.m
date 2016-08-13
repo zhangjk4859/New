@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HPBasicViewController.h"
 #import "HPTabBarVC.h"
+#import "HPShopVC.h"
 
 @interface AppDelegate ()
 
@@ -25,8 +26,9 @@
     
     //2.创建根控制器
     //2.1创建视图
-    HPTabBarVC *tabBarVC = [[HPTabBarVC alloc] init];
-    self.window.rootViewController = tabBarVC;
+    //HPTabBarVC *tabBarVC = [[HPTabBarVC alloc] init];
+    HPShopVC *shopVC = [[HPShopVC alloc] init];
+    self.window.rootViewController = shopVC;
     
     
     return YES;

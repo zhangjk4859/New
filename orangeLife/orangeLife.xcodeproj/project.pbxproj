@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				0A020C8D1D4EF07A00458BA3 /* MainController */,
-				0AE0B7EC1D5429650043900A /* 美食 */,
+				0AE0B7EC1D5429650043900A /* 购物 */,
 				0AE0B7E51D5414C10043900A /* 新闻 */,
 				0A020CB51D4F3AD800458BA3 /* Seasame */,
 				0A020C9D1D4F193800458BA3 /* Other */,
@@ -283,13 +283,14 @@
 			path = "新闻";
 			sourceTree = "<group>";
 		};
-		0AE0B7EC1D5429650043900A /* 美食 */ = {
+		0AE0B7EC1D5429650043900A /* 购物 */ = {
 			isa = PBXGroup;
 			children = (
 				0AE0B7ED1D5429650043900A /* Controller */,
 				0AE0B7F01D5429650043900A /* Model */,
 				0AE0B7F11D5429650043900A /* View */,
 			);
+			name = "购物";
 			path = "美食";
 			sourceTree = "<group>";
 		};

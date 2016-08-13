@@ -11,6 +11,7 @@
 #import "REMenu.h"
 #import "UIBarButtonItem+HPExtension.h"
 #import "HPWebViewVC.h"
+#import "HPShopVC.h"
 
 @interface HPNewsVC ()
 @property (nonatomic, strong) REMenu *menu;
@@ -121,8 +122,16 @@
                                                                  [weakSelf pushViewControllerWithUrl:baiduSearchUrl andTitle:@"百度搜索"];
                                                              }];
     
+    REMenuItem *juziItem = [[REMenuItem alloc] initWithTitle:@"桔子生活"
+                                                           subtitle:nil
+                                                              image:nil
+                                                   highlightedImage:nil
+                                                             action:^(REMenuItem *item) {
+                                                                 [weakSelf pushViewControllerWithUrl:shopURL andTitle:@"桔子生活"];
+                                                             }];
     
-    self.menu = [[REMenu alloc] initWithItems:@[fengItem, baiduItem, sinaItem, tencenItem, wangyiItem,souhuItem,toutiaoItem,baiduSearchItem]];
+    
+    self.menu = [[REMenu alloc] initWithItems:@[fengItem, baiduItem, sinaItem, tencenItem, wangyiItem,souhuItem,toutiaoItem,baiduSearchItem,juziItem]];
     self.menu.liveBlur = YES;
     self.menu.liveBlurBackgroundStyle = REMenuLiveBackgroundStyleDark;
     self.menu.textColor = [UIColor whiteColor];
@@ -138,6 +147,7 @@
     HPWebViewVC *webVC = [[HPWebViewVC alloc] init];
     webVC.link = url;
     webVC.title = title;
+    webVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

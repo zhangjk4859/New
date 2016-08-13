@@ -30,8 +30,8 @@
 //1.加载两个子控制器
 -(void)loadChildViewControllers
 {
-    [self setupChildVC:[[HPNewsVC alloc] init] WithTitle:@"新闻" image:@"lf_tabbar_home" selectedImage:@"lf_tabbar_home_selected"];
-    [self setupChildVC:[[HPShopVC alloc] init] WithTitle:@"购物" image:@"lf_tabbar_cart" selectedImage:@"lf_tabbar_cart_selected"];
+    [self setupChildVC:[[HPNewsVC alloc] init] WithTitle:@"综合" image:@"lf_tabbar_home" selectedImage:@"lf_tabbar_home_selected"];
+//    [self setupChildVC:[[HPShopVC alloc] init] WithTitle:@"购物" image:@"lf_tabbar_cart" selectedImage:@"lf_tabbar_cart_selected"];
 }
 
 //抽出来的方法，统一设置四个子控制器

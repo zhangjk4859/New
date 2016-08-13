@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     //1.设置tabbar样式
     [self setupTabBar];
     
@@ -33,11 +33,13 @@
 //2.添加webView
 -(void)setupWebView
 {
-    CGRect frame = CGRectMake(0, 0, self.view.width, self.view.height);
+    CGRect frame = CGRectMake(0, statusBarHeight, self.view.width, self.view.height - statusBarHeight );
     UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
     [self.view addSubview:webView];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.120:80/juzi/index.php"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
     webView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
+    webView.backgroundColor = [UIColor whiteColor];
+    webView.scrollView.bounces = NO;
     [webView loadRequest:request];
     webView.delegate = self;
     self.webView = webView;
@@ -50,7 +52,7 @@
 
 -(void)backToHomePage
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.0.120:80/juzi/index.php"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
     [self.webView loadRequest:request];
 }
 

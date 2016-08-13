@@ -34,7 +34,7 @@
 //1.添加webView
 -(void)setupWebView
 {
-    CGRect frame = CGRectMake(0, 0, self.view.width, self.view.height - tabBarBarHeight);
+    CGRect frame = CGRectMake(0, 0, self.view.width, self.view.height);
     WKWebView *webView = [[WKWebView alloc] initWithFrame:frame];
     [self.view addSubview:webView];
     [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
