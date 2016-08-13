@@ -12,6 +12,7 @@
 
 @interface HPShopVC ()<UIWebViewDelegate>
 @property(nonatomic,weak)UIWebView *webView;
+@property WebViewJavascriptBridge* bridge;
 @end
 
 @implementation HPShopVC
@@ -28,8 +29,39 @@
     //3.添加刷新按钮
     [self addRefreshButton];
     
+    //4.设置桥接模式
+    [self setupBridge];
+    
 
 }
+
+//4.设置桥接模式
+-(void)setupBridge
+{
+    //4.1.如果已经生成，返回
+    if (_bridge) { return; }
+    
+    //4.2.先开启日志模式
+    [WebViewJavascriptBridge enableLogging];
+    [_bridge setWebViewDelegate:self];
+    
+    //4.3.开始搭桥
+    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    
+    //4.4.JS调用OC的方法
+    [_bridge registerHandler:@"zjk" handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+//        //JS给OC传值
+//        NSLog(@"JS给OC传值: %@", data);
+//        //回调JS方法
+//        responseCallback(@"OC回调JS方法");
+        JKLogFunc;
+        
+    }];
+    
+   
+}
+
 
 //2.添加webView
 -(void)setupWebView
