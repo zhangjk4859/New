@@ -7,6 +7,7 @@
 //
 
 #import "HPShopVC.h"
+#import "WebViewJavascriptBridge.h"
 
 
 @interface HPShopVC ()<UIWebViewDelegate>
