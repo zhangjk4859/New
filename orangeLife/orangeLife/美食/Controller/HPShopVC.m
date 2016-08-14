@@ -26,11 +26,12 @@
     //2.添加webView
     [self setupWebView];
     
-    //3.添加刷新按钮
+    //3.添加导航刷新按钮
     [self addRefreshButton];
     
     //4.设置桥接模式
     [self setupBridge];
+    
     
 
 }
@@ -80,7 +81,10 @@
 
 -(void)addRefreshButton
 {
+    //添加按钮
     self.navigationItem. leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"主页" style:UIBarButtonItemStylePlain target:self action:@selector(backToHomePage)];
+    //隐藏导航栏
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 -(void)backToHomePage

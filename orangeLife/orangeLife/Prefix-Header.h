@@ -19,6 +19,7 @@
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "HPProgressView.h"
+#import "HPNavigationVC.h"
 
 //调试状态打印日志
 #ifdef DEBUG
@@ -42,7 +43,8 @@
 //随机色
 #define JKRandomColor JKRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 //购物网址
-#define shopURL @"http://192.168.0.120/juzi/mobile/"
+//#define shopURL @"http://192.168.0.120/juzi/mobile/"
+#define shopURL @"http://m.baidu.com/"
 
 //屏幕高度
 #define  JKScreenW  [UIScreen mainScreen].bounds.size.width

@@ -28,7 +28,8 @@
     //2.1创建视图
     //HPTabBarVC *tabBarVC = [[HPTabBarVC alloc] init];
     HPShopVC *shopVC = [[HPShopVC alloc] init];
-    self.window.rootViewController = shopVC;
+    HPNavigationVC *nav = [[HPNavigationVC alloc] initWithRootViewController:shopVC];
+    self.window.rootViewController = nav;
     
     
     return YES;
