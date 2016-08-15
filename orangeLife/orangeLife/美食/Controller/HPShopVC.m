@@ -8,6 +8,7 @@
 
 #import "HPShopVC.h"
 #import "WebViewJavascriptBridge.h"
+#import "HPSesameVC.h"
 
 
 @interface HPShopVC ()<UIWebViewDelegate>
@@ -43,7 +44,7 @@
     if (_bridge) { return; }
     
     //4.2.先开启日志模式
-    [WebViewJavascriptBridge enableLogging];
+    //[WebViewJavascriptBridge enableLogging];
     [_bridge setWebViewDelegate:self];
     
     //4.3.开始搭桥
@@ -56,7 +57,12 @@
 //        NSLog(@"JS给OC传值: %@", data);
 //        //回调JS方法
 //        responseCallback(@"OC回调JS方法");
-        JKLogFunc;
+//        JKLogFunc;
+        
+        //推出芝麻信用控制器
+        HPSesameVC *seameVC = [HPSesameVC new];
+        [self.navigationController pushViewController:seameVC animated:YES];
+        
         
     }];
     
@@ -82,11 +88,16 @@
 -(void)addRefreshButton
 {
     //添加按钮
-    self.navigationItem. leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"主页" style:UIBarButtonItemStylePlain target:self action:@selector(backToHomePage)];
+//    self.navigationItem. leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"主页" style:UIBarButtonItemStylePlain target:self action:@selector(backToHomePage)];
+}
+
+//即将出现隐藏导航栏
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
 }
-
 -(void)backToHomePage
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];

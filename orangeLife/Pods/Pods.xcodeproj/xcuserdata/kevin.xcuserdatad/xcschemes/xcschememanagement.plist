@@ -9,12 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FCUUID.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,7 +64,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UICKeyChainStore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>WebViewJavascriptBridge.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YTKKeyValueStore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>013ABACF6D40906D824DC93A62613A04</key>
+		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C53AE149AE4452152691C881265B17F</key>
+		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<key>29DD99664D189A7CA206368F493B1E0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90A83DB33067436F211D4040D0DAE371</key>
+		<key>56BE8F227A11D58BF234BCD47300C0D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
+		<key>5A95EE88665C489BCB56A4B476306272</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
+		<key>65DC4EFC8ACEF3A1A67B1FCADCAFE175</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D71BE9F13AFF61F63E9A2ACCE795EED8</key>
+		<key>6E410BC792ECEB1F548F1C7E495FED06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEDC37035F18743CCF2F22B11BAF1413</key>
+		<key>7C0126D717EB28DC6DB2EEA2E20B5172</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E904F4329EEB928EA5DB23839FB2949</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9A83F63385AA43314397B8DD375464B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6792EF02D9FF4B3AA393DBE2FBAC28F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB79FC35FAA08BD82D157DF331991040</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC5C778F6AB3554F7C7AB9BB36244916</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECD1DDF6525BBCF0E47CE70E4018F97B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB9B812F6F21D849A005899FCF85F2DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

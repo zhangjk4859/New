@@ -1,4 +1,5 @@
 platform :ios, '8.0'
+use_frameworks!
 
 pod "AFNetworking"
 pod 'MJExtension'
@@ -7,3 +8,7 @@ pod 'SDWebImage'
 pod 'REMenu'
 pod 'MJRefresh'
 pod 'WebViewJavascriptBridge', '~> 5.0'
+pod 'YTKKeyValueStore'
+pod 'Masonry'
+pod 'ReactiveCocoa'
+pod 'FCUUID'

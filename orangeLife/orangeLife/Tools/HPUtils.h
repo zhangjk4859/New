@@ -10,4 +10,5 @@
 
 @interface HPUtils : NSObject
 +(NSString *)getCurrentTime;
++(NSMutableDictionary *)getBasicDictionary;
 @end

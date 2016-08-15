@@ -20,6 +20,10 @@
 #import "MJRefresh.h"
 #import "HPProgressView.h"
 #import "HPNavigationVC.h"
+#import "YTKKeyValueStore.h"
+#import "ReactiveCocoa.h"
+//第三方获取UUID
+#import "UIDevice+FCUUID.h"
 
 //调试状态打印日志
 #ifdef DEBUG
@@ -38,13 +42,21 @@
 //统一导航栏颜色，橘黄色
 #define JKNavBarColor [UIColor colorWithRed:0.986 green:0.289 blue:0.017 alpha:1.000]
 
+//全局统一灰色
+#define JKGlobeGrayColor [UIColor colorWithWhite:0.902 alpha:1.000]
+
 //自定义颜色
 #define JKRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 //随机色
 #define JKRandomColor JKRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 //购物网址
-//#define shopURL @"http://192.168.0.120/juzi/mobile/"
-#define shopURL @"http://m.baidu.com/"
+#define shopURL @"http://192.168.0.120/juzi/mobile/"
+//#define shopURL @"http://m.baidu.com/"
+
+//定义URL
+#define kBaseURL       @"http://mobile.yuyanzhe.me/"  //正式环境
+#define kZMParamsURL   @"zmxy/prames.json"            //芝麻信用参数加密处理
+#define kZMSubmitURL   @"zmxy/submit"                 //授权登录
 
 //屏幕高度
 #define  JKScreenW  [UIScreen mainScreen].bounds.size.width

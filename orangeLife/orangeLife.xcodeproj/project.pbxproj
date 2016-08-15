@@ -35,11 +35,13 @@
 		0A73D4A41D5DA1DB00F828D6 /* HPShopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73D4A31D5DA1DB00F828D6 /* HPShopVC.m */; };
 		0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73D4A61D5DB8B900F828D6 /* HPProgressView.m */; };
 		0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */; };
+		0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */; };
+		0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */; };
 		0AE0B7E01D5412220043900A /* HPTabBarVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7DF1D5412220043900A /* HPTabBarVC.mm */; };
 		0AE0B7E81D54180E0043900A /* HPNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7E71D54180E0043900A /* HPNewsVC.m */; };
 		0AE0B7EB1D541AD10043900A /* HPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7EA1D541AD10043900A /* HPWebViewVC.m */; };
 		0AEB624F1D51F60A00B38A29 /* UIBarButtonItem+HPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB624E1D51F60A00B38A29 /* UIBarButtonItem+HPExtension.m */; };
-		0F7B1C56A9718E1BFA62BCF6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F4FB3B9460EDBFA614009D /* libPods.a */; };
+		D5BE9022D06B9E0C59307570 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3A62BE8FF6A4D6435D299C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,9 @@
 		0A73D4A61D5DB8B900F828D6 /* HPProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPProgressView.m; sourceTree = "<group>"; };
 		0A9BD24F1D604E2D00D8AD25 /* HPNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNavigationVC.h; sourceTree = "<group>"; };
 		0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNavigationVC.m; sourceTree = "<group>"; };
+		0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSesameVC.h; sourceTree = "<group>"; };
+		0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSesameVC.m; sourceTree = "<group>"; };
+		0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPSesameVC.xib; sourceTree = "<group>"; };
 		0AE0B7DE1D5412220043900A /* HPTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTabBarVC.h; sourceTree = "<group>"; };
 		0AE0B7DF1D5412220043900A /* HPTabBarVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HPTabBarVC.mm; sourceTree = "<group>"; };
 		0AE0B7E61D54180E0043900A /* HPNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNewsVC.h; sourceTree = "<group>"; };
@@ -113,7 +118,7 @@
 		0AEB624E1D51F60A00B38A29 /* UIBarButtonItem+HPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HPExtension.m"; sourceTree = "<group>"; };
 		18810DF49973A73CE918D0E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		93850DD3917DBBCCA06E5392 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A7F4FB3B9460EDBFA614009D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3A62BE8FF6A4D6435D299C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +138,7 @@
 				0A020CA61D4F37A500458BA3 /* MessageUI.framework in Frameworks */,
 				0A020CA41D4F379600458BA3 /* CFNetwork.framework in Frameworks */,
 				0A020CA21D4F378600458BA3 /* MobileCoreServices.framework in Frameworks */,
-				0F7B1C56A9718E1BFA62BCF6 /* libPods.a in Frameworks */,
+				D5BE9022D06B9E0C59307570 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +309,9 @@
 				0A73D4A31D5DA1DB00F828D6 /* HPShopVC.m */,
 				0A9BD24F1D604E2D00D8AD25 /* HPNavigationVC.h */,
 				0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */,
+				0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */,
+				0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */,
+				0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,7 +354,7 @@
 				0A020CA51D4F37A500458BA3 /* MessageUI.framework */,
 				0A020CA31D4F379600458BA3 /* CFNetwork.framework */,
 				0A020CA11D4F378600458BA3 /* MobileCoreServices.framework */,
-				A7F4FB3B9460EDBFA614009D /* libPods.a */,
+				DA3A62BE8FF6A4D6435D299C /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */,
 				0A020CC51D4F408A00458BA3 /* Poseidon.bundle in Resources */,
 				0A4815781D4C4BE100B35AA2 /* LaunchScreen.storyboard in Resources */,
 				0A4815751D4C4BE100B35AA2 /* Assets.xcassets in Resources */,
@@ -547,6 +556,7 @@
 				0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */,
 				0AE0B7E01D5412220043900A /* HPTabBarVC.mm in Sources */,
 				0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */,
+				0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */,
 				0A020CA01D4F2CEA00458BA3 /* HPHttpManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

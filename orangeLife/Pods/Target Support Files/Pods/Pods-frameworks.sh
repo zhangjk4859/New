@@ -82,3 +82,36 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/FCUUID.framework"
+  install_framework "Pods/FMDB.framework"
+  install_framework "Pods/MJExtension.framework"
+  install_framework "Pods/MJRefresh.framework"
+  install_framework "Pods/Masonry.framework"
+  install_framework "Pods/REMenu.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/Result.framework"
+  install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/UICKeyChainStore.framework"
+  install_framework "Pods/WebViewJavascriptBridge.framework"
+  install_framework "Pods/YTKKeyValueStore.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/FCUUID.framework"
+  install_framework "Pods/FMDB.framework"
+  install_framework "Pods/MJExtension.framework"
+  install_framework "Pods/MJRefresh.framework"
+  install_framework "Pods/Masonry.framework"
+  install_framework "Pods/REMenu.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/Result.framework"
+  install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/UICKeyChainStore.framework"
+  install_framework "Pods/WebViewJavascriptBridge.framework"
+  install_framework "Pods/YTKKeyValueStore.framework"
+fi
