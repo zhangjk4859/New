@@ -24,11 +24,11 @@
 }
 
 
-//可以在这个方法中拦截所有push进来的控制器
+//可以在这个方法中拦截所有push进来的控制器（只有两个子控制器，才显示自定义按钮）
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
-    if (self.childViewControllers.count > 0) {
+    if (self.childViewControllers.count < 2) {
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"" forState:UIControlStateNormal];
@@ -45,8 +45,7 @@
         //添加按钮动作
         [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem= [[UIBarButtonItem alloc]initWithCustomView:btn];
-        
-    }
+        }
     
     [super pushViewController:viewController animated:animated];
     

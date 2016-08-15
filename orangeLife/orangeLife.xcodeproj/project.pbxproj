@@ -37,6 +37,8 @@
 		0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */; };
 		0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */; };
 		0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */; };
+		0ABF54B41D61DC0C00A34CB6 /* HPAlipayCertifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF54B21D61DC0C00A34CB6 /* HPAlipayCertifyVC.m */; };
+		0ABF54B51D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF54B31D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib */; };
 		0AE0B7E01D5412220043900A /* HPTabBarVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7DF1D5412220043900A /* HPTabBarVC.mm */; };
 		0AE0B7E81D54180E0043900A /* HPNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7E71D54180E0043900A /* HPNewsVC.m */; };
 		0AE0B7EB1D541AD10043900A /* HPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0B7EA1D541AD10043900A /* HPWebViewVC.m */; };
@@ -108,6 +110,9 @@
 		0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSesameVC.h; sourceTree = "<group>"; };
 		0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSesameVC.m; sourceTree = "<group>"; };
 		0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPSesameVC.xib; sourceTree = "<group>"; };
+		0ABF54B11D61DC0C00A34CB6 /* HPAlipayCertifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAlipayCertifyVC.h; sourceTree = "<group>"; };
+		0ABF54B21D61DC0C00A34CB6 /* HPAlipayCertifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAlipayCertifyVC.m; sourceTree = "<group>"; };
+		0ABF54B31D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPAlipayCertifyVC.xib; sourceTree = "<group>"; };
 		0AE0B7DE1D5412220043900A /* HPTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTabBarVC.h; sourceTree = "<group>"; };
 		0AE0B7DF1D5412220043900A /* HPTabBarVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HPTabBarVC.mm; sourceTree = "<group>"; };
 		0AE0B7E61D54180E0043900A /* HPNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNewsVC.h; sourceTree = "<group>"; };
@@ -312,6 +317,9 @@
 				0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */,
 				0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */,
 				0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */,
+				0ABF54B11D61DC0C00A34CB6 /* HPAlipayCertifyVC.h */,
+				0ABF54B21D61DC0C00A34CB6 /* HPAlipayCertifyVC.m */,
+				0ABF54B31D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -469,6 +477,7 @@
 				0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */,
 				0A020CC51D4F408A00458BA3 /* Poseidon.bundle in Resources */,
 				0A4815781D4C4BE100B35AA2 /* LaunchScreen.storyboard in Resources */,
+				0ABF54B51D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib in Resources */,
 				0A4815751D4C4BE100B35AA2 /* Assets.xcassets in Resources */,
 				0A020CC31D4F408200458BA3 /* H5Service.bundle in Resources */,
 			);
@@ -548,6 +557,7 @@
 				0A4815A51D4C544B00B35AA2 /* UIView+HPExtension.m in Sources */,
 				0AE0B7EB1D541AD10043900A /* HPWebViewVC.m in Sources */,
 				0A48156D1D4C4BE100B35AA2 /* AppDelegate.m in Sources */,
+				0ABF54B41D61DC0C00A34CB6 /* HPAlipayCertifyVC.m in Sources */,
 				0AEB624F1D51F60A00B38A29 /* UIBarButtonItem+HPExtension.m in Sources */,
 				0A48156A1D4C4BE100B35AA2 /* main.m in Sources */,
 				0A2336981D503C4800E5833B /* Foundation+Log.m in Sources */,

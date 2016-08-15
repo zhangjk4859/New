@@ -11,4 +11,10 @@
 @interface HPUtils : NSObject
 +(NSString *)getCurrentTime;
 +(NSMutableDictionary *)getBasicDictionary;
+
+
+//颜色生成图片的三种方法
++(UIImageView *)creatSystemThemeImageViewWithFrame:(CGRect)frame;
++(UIImageView *) BgImageViewFromColors:(NSArray*)colors withFrame: (CGRect)frame;
++(UIImage *)imageFromColor:(UIColor *)color andSize:(CGSize)size;
 @end

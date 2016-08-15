@@ -25,6 +25,11 @@
 //第三方获取UUID
 #import "UIDevice+FCUUID.h"
 
+
+//定义一些常用字符串
+#define kUserUUID   @"userUUID"
+
+
 //调试状态打印日志
 #ifdef DEBUG
 #define JKLog(...) NSLog(__VA_ARGS__)
@@ -38,6 +43,10 @@
 #define JKLogFunc JKLog(@"%s",__func__)
 //打印frame
 #define JKLogFrame(...) JKLog(@"%@",NSStringFromCGRect(__VA_ARGS__))
+
+//定义两个系统主题颜色
+#define systemRedColor [UIColor colorWithRed:0.945 green:0.380 blue:0.498 alpha:1.000]
+#define systemOrangeColor [UIColor colorWithRed:1.000 green:0.638 blue:0.273 alpha:1.000]
 
 //统一导航栏颜色，橘黄色
 #define JKNavBarColor [UIColor colorWithRed:0.986 green:0.289 blue:0.017 alpha:1.000]
@@ -64,6 +73,8 @@
 
 //定义网络请求超时时间
 #define JKTimeoutInterval 20.0
+
+
 
 
 #endif /* Prefix_Header_h */

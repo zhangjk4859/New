@@ -58,8 +58,7 @@
     self.topVIew.backgroundColor = JKGlobeGrayColor;
     self.isBinded = NO;
     self.topVIew.hidden = YES;
-    //去加载，判断是否绑定
-    //[self configBindingInfo];
+
     
     self.bindButton.enabled = NO;
     self.bindButton.alpha = 0.5;
@@ -68,37 +67,7 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
-//每次界面要出现的时候也去检查是否绑定
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    //去加载，判断是否绑定
-    //[self configBindingInfo];
-}
 
-
-
-//检测绑定信息
--(void)configBindingInfo
-{
-//    YTKKeyValueStore *store = [[YTKKeyValueStore alloc] initDBWithName:@"test.db"];
-//    NSString *tableName = @"user_table";
-//    // 创建名为user_table的表，如果已存在，则忽略该操作
-//    [store createTableWithName:tableName];
-//    
-//    NSDictionary * dataDic = [store getObjectById:kHomePageInfo fromTable:tableName];
-//    NSInteger sesame = [dataDic[@"sesame"] integerValue];
-//    if ( sesame == 1 ) {//已经绑定,显示已经绑定
-//        //绑定成功，显示对号
-//        self.topVIew.hidden = NO;
-//        //动画覆盖
-//        self.topVIew.alpha = 0;
-//        [UIView animateWithDuration:2.0 animations:^{
-//            self.topVIew.alpha = 1;
-//        }];
-//    }
-    
-}
 
 
 //绑定芝麻信用授权
@@ -127,6 +96,8 @@
         }else if(code == 401){//绑定成功，显示对号视图
             self.topVIew.hidden = NO;
             
+        }else{//错误码402 芝麻信用授权失败
+            [SVProgressHUD showErrorWithStatus:@"芝麻信用授权失败"];
         }
         
         
@@ -159,22 +130,22 @@
             
             //更改芝麻信用绑定状态，回到主线程刷新
             dispatch_async(dispatch_get_main_queue(), ^{
-//                [HPUtile changeBindStateWithItem:@"sesame"];
-//                [self configBindingInfo];
+
+                //对号盖住主界面
                 self.topVIew.hidden = NO;
             });
             
             
 
         }else if (code == 402){//芝麻信用服务器授权失败
-            NSString *message = responseObject[@"message"];
-//            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"%@%@",message,@"请重新绑定支付宝"]maskType:SVProgressHUDMaskTypeGradient];
-            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@%@",message,@",请重新绑定支付宝"]];
-            //重新绑定支付宝
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//             HPAlipayReCertifyVC *reAlipayVC = [HPAlipayReCertifyVC new];
-//                [self.navigationController pushViewController: reAlipayVC animated:YES];
-            });
+                //            NSString *message = responseObject[@"message"];
+                //
+                //            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@%@",message,@",请重新绑定支付宝"]];
+                //            //重新绑定支付宝
+                //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                //             HPAlipayReCertifyVC *reAlipayVC = [HPAlipayReCertifyVC new];
+                //                [self.navigationController pushViewController: reAlipayVC animated:YES];
+                //            });
         }else{//其他情况
            // [SVProgressHUD dismiss];
             [SVProgressHUD showInfoWithStatus:@"绑定失败，请重试"];
@@ -195,15 +166,6 @@
     }
     
 }
-
-//点击查看隐私权政策
-- (IBAction)agreenmentButtonClick:(UIButton *)sender {
-//    HPAgreenmentVC *agreenVC = [[HPAgreenmentVC alloc]init];
-//    agreenVC.code = @"agreement_zmxy";//通讯录协议
-//    [self.navigationController pushViewController:agreenVC animated:YES];
-}
-
-
 
 
 @end
