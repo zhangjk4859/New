@@ -36,6 +36,8 @@
 		0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73D4A61D5DB8B900F828D6 /* HPProgressView.m */; };
 		0A7497AB1D62B4C000C0C348 /* HPLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7497A81D62B4C000C0C348 /* HPLineView.m */; };
 		0A7497AC1D62B4C000C0C348 /* HPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7497AA1D62B4C000C0C348 /* HPTextField.m */; };
+		0A7497AF1D62F44E00C0C348 /* HPErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7497AE1D62F44E00C0C348 /* HPErrorView.m */; };
+		0A7497B11D62F46200C0C348 /* HPErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7497B01D62F46200C0C348 /* HPErrorView.xib */; };
 		0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */; };
 		0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */; };
 		0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */; };
@@ -111,6 +113,9 @@
 		0A7497A81D62B4C000C0C348 /* HPLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPLineView.m; sourceTree = "<group>"; };
 		0A7497A91D62B4C000C0C348 /* HPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextField.h; sourceTree = "<group>"; };
 		0A7497AA1D62B4C000C0C348 /* HPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextField.m; sourceTree = "<group>"; };
+		0A7497AD1D62F44E00C0C348 /* HPErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPErrorView.h; sourceTree = "<group>"; };
+		0A7497AE1D62F44E00C0C348 /* HPErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPErrorView.m; sourceTree = "<group>"; };
+		0A7497B01D62F46200C0C348 /* HPErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPErrorView.xib; sourceTree = "<group>"; };
 		0A9BD24F1D604E2D00D8AD25 /* HPNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNavigationVC.h; sourceTree = "<group>"; };
 		0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNavigationVC.m; sourceTree = "<group>"; };
 		0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSesameVC.h; sourceTree = "<group>"; };
@@ -336,6 +341,9 @@
 				0A7497A81D62B4C000C0C348 /* HPLineView.m */,
 				0A7497A91D62B4C000C0C348 /* HPTextField.h */,
 				0A7497AA1D62B4C000C0C348 /* HPTextField.m */,
+				0A7497AD1D62F44E00C0C348 /* HPErrorView.h */,
+				0A7497AE1D62F44E00C0C348 /* HPErrorView.m */,
+				0A7497B01D62F46200C0C348 /* HPErrorView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +488,7 @@
 				0A020CC51D4F408A00458BA3 /* Poseidon.bundle in Resources */,
 				0A4815781D4C4BE100B35AA2 /* LaunchScreen.storyboard in Resources */,
 				0ABF54B51D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib in Resources */,
+				0A7497B11D62F46200C0C348 /* HPErrorView.xib in Resources */,
 				0A4815751D4C4BE100B35AA2 /* Assets.xcassets in Resources */,
 				0A020CC31D4F408200458BA3 /* H5Service.bundle in Resources */,
 			);
@@ -569,6 +578,7 @@
 				0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */,
 				0AE0B7E01D5412220043900A /* HPTabBarVC.mm in Sources */,
 				0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */,
+				0A7497AF1D62F44E00C0C348 /* HPErrorView.m in Sources */,
 				0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */,
 				0A7497AB1D62B4C000C0C348 /* HPLineView.m in Sources */,
 				0A020CA01D4F2CEA00458BA3 /* HPHttpManager.m in Sources */,

@@ -10,11 +10,13 @@
 #import "WebViewJavascriptBridge.h"
 #import "HPSesameVC.h"
 #import "HPAlipayCertifyVC.h"
+#import "HPErrorView.h"
 
 
 @interface HPShopVC ()<UIWebViewDelegate>
 @property(nonatomic,weak)UIWebView *webView;
 @property WebViewJavascriptBridge* bridge;
+@property(nonatomic,weak)UIView *errorView;
 @end
 
 @implementation HPShopVC
@@ -135,13 +137,41 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [SVProgressHUD dismiss];
+    [self.view insertSubview:webView aboveSubview:self.errorView];
+   
+    if (self.errorView) {
+        [UIView animateWithDuration:0.8 animations:^{
+            self.errorView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [self.errorView removeFromSuperview];
+        }];
+    }
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [SVProgressHUD showErrorWithStatus:@"啊哦,好像网络有点问题,请检查网络设置再重新打开APP"];
     self.navigationController.navigationBar.hidden = NO;
-    self.navigationItem.title  = @"桔子生活";
+    self.navigationItem.title  = @"加载失败";
+    [self addNetworkErrorView];
+}
+
+-(void)addNetworkErrorView
+{
+    //如果没有添加过，再添加
+    if (!self.errorView) {
+        
+        HPErrorView *errorView = [HPErrorView errorView];
+        self.errorView = errorView;
+        errorView.frame = self.view.bounds;
+        [self.view addSubview:errorView];
+        errorView.clickBlock = ^{
+            
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
+            [self.webView loadRequest:request];
+        };
+    }
+    
 }
 
 @end
