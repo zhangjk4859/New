@@ -35,8 +35,26 @@
     [self setupBridge];
     
     
+    
+    
 
 }
+
+
+
+//2.添加webView
+-(void)setupWebView
+{
+    CGRect frame = CGRectMake(0, statusBarHeight, self.view.width, self.view.height - statusBarHeight );
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
+    [self.view addSubview:webView];
+    webView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
+    webView.backgroundColor = [UIColor whiteColor];
+    webView.scrollView.bounces = NO;
+    //webView.delegate = self;
+    self.webView = webView;
+}
+
 
 //4.设置桥接模式
 -(void)setupBridge
@@ -45,11 +63,11 @@
     if (_bridge) { return; }
     
     //4.2.先开启日志模式
-    //[WebViewJavascriptBridge enableLogging];
-    [_bridge setWebViewDelegate:self];
+    [WebViewJavascriptBridge enableLogging];
+    
     
     //4.3.开始搭桥
-    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    _bridge = [WebViewJavascriptBridge bridgeForWebView:_webView];
     
     //4.4.JS调用OC的方法
     [_bridge registerHandler:@"zjk" handler:^(id data, WVJBResponseCallback responseCallback) {
@@ -61,23 +79,17 @@
         
     }];
     
-   
+    //4.5.设置webView代理
+    [_bridge setWebViewDelegate:self];
 }
 
 
-//2.添加webView
--(void)setupWebView
+-(void)viewDidAppear:(BOOL)animated
 {
-    CGRect frame = CGRectMake(0, statusBarHeight, self.view.width, self.view.height - statusBarHeight );
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
-    [self.view addSubview:webView];
+    [super viewDidAppear:animated];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
-    webView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
-    webView.backgroundColor = [UIColor whiteColor];
-    webView.scrollView.bounces = NO;
-    [webView loadRequest:request];
-    webView.delegate = self;
-    self.webView = webView;
+    [self.webView loadRequest:request];
+    
 }
 
 -(void)addRefreshButton
@@ -127,7 +139,9 @@
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    [SVProgressHUD showErrorWithStatus:@"啊哦,好像网络有点问题"];
+    [SVProgressHUD showErrorWithStatus:@"啊哦,好像网络有点问题,请检查网络设置再重新打开APP"];
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.title  = @"桔子生活";
 }
 
 @end
