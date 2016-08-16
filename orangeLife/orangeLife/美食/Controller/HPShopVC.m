@@ -9,6 +9,7 @@
 #import "HPShopVC.h"
 #import "WebViewJavascriptBridge.h"
 #import "HPSesameVC.h"
+#import "HPAlipayCertifyVC.h"
 
 
 @interface HPShopVC ()<UIWebViewDelegate>
@@ -53,15 +54,9 @@
     //4.4.JS调用OC的方法
     [_bridge registerHandler:@"zjk" handler:^(id data, WVJBResponseCallback responseCallback) {
         
-//        //JS给OC传值
-//        NSLog(@"JS给OC传值: %@", data);
-//        //回调JS方法
-//        responseCallback(@"OC回调JS方法");
-//        JKLogFunc;
         
-        //推出芝麻信用控制器
-        HPSesameVC *seameVC = [HPSesameVC new];
-        [self.navigationController pushViewController:seameVC animated:YES];
+        HPAlipayCertifyVC *aliVC = [HPAlipayCertifyVC new];
+        [self.navigationController pushViewController:aliVC animated:YES];
         
         
     }];
@@ -97,6 +92,11 @@
     [super viewWillAppear:animated];
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //显示导航栏
+    self.navigationController.navigationBar.hidden = NO;
 }
 -(void)backToHomePage
 {

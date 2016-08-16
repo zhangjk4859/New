@@ -38,14 +38,14 @@
     params[@"versionName"] = @"1.1";//安卓
     params[@"type"] =@"jvzhi" ;
     params[@"device"] = @(0);//安卓，数字
-    params[@"license"] = @"testLicense";//license为空
+    //params[@"license"] = @"testLicense";//license为空
     params[@"mac"] = [self getMacaddress];
     
     //设置GPS
     NSMutableDictionary *GPSDic = [NSMutableDictionary dictionary];
-    GPSDic[@"lat"] = @"juziLife";//GPS信息为空
-    GPSDic[@"lng"] = @"juziLife";
-    GPSDic[@"accuracy"] = @"juziLife";
+    GPSDic[@"lat"] = @"37.785834";//GPS信息为空
+    GPSDic[@"lng"] = @"-122.406417";
+    GPSDic[@"accuracy"] = @"5";
     GPSDic[@"locationType"] = @(0) ;
     GPSDic[@"time"] = @(0);
     

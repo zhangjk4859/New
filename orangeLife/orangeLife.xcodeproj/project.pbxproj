@@ -34,6 +34,8 @@
 		0A4E35871D506F8800E195C4 /* HPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E35861D506F8800E195C4 /* HPUtils.m */; };
 		0A73D4A41D5DA1DB00F828D6 /* HPShopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73D4A31D5DA1DB00F828D6 /* HPShopVC.m */; };
 		0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73D4A61D5DB8B900F828D6 /* HPProgressView.m */; };
+		0A7497AB1D62B4C000C0C348 /* HPLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7497A81D62B4C000C0C348 /* HPLineView.m */; };
+		0A7497AC1D62B4C000C0C348 /* HPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7497AA1D62B4C000C0C348 /* HPTextField.m */; };
 		0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */; };
 		0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF54A51D618DE800A34CB6 /* HPSesameVC.m */; };
 		0ABF54A81D618DE800A34CB6 /* HPSesameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF54A61D618DE800A34CB6 /* HPSesameVC.xib */; };
@@ -85,7 +87,7 @@
 		0A4815691D4C4BE100B35AA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A48156B1D4C4BE100B35AA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A48156C1D4C4BE100B35AA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A4815741D4C4BE100B35AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = orangeLife/Assets.xcassets; sourceTree = "<group>"; };
+		0A4815741D4C4BE100B35AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A4815771D4C4BE100B35AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A4815791D4C4BE100B35AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A48157E1D4C4BE100B35AA2 /* orangeLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = orangeLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,10 @@
 		0A73D4A31D5DA1DB00F828D6 /* HPShopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPShopVC.m; sourceTree = "<group>"; };
 		0A73D4A51D5DB8B900F828D6 /* HPProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPProgressView.h; sourceTree = "<group>"; };
 		0A73D4A61D5DB8B900F828D6 /* HPProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPProgressView.m; sourceTree = "<group>"; };
+		0A7497A71D62B4C000C0C348 /* HPLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPLineView.h; sourceTree = "<group>"; };
+		0A7497A81D62B4C000C0C348 /* HPLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPLineView.m; sourceTree = "<group>"; };
+		0A7497A91D62B4C000C0C348 /* HPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextField.h; sourceTree = "<group>"; };
+		0A7497AA1D62B4C000C0C348 /* HPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextField.m; sourceTree = "<group>"; };
 		0A9BD24F1D604E2D00D8AD25 /* HPNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNavigationVC.h; sourceTree = "<group>"; };
 		0A9BD2501D604E2D00D8AD25 /* HPNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNavigationVC.m; sourceTree = "<group>"; };
 		0ABF54A41D618DE800A34CB6 /* HPSesameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSesameVC.h; sourceTree = "<group>"; };
@@ -173,19 +179,6 @@
 			name = MainController;
 			sourceTree = "<group>";
 		};
-		0A020C9D1D4F193800458BA3 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				0A4815A61D4C54D700B35AA2 /* Prefix-Header.h */,
-				0A2336971D503C4800E5833B /* Foundation+Log.m */,
-				0A48156B1D4C4BE100B35AA2 /* AppDelegate.h */,
-				0A48156C1D4C4BE100B35AA2 /* AppDelegate.m */,
-				0A4815761D4C4BE100B35AA2 /* LaunchScreen.storyboard */,
-				0A4815791D4C4BE100B35AA2 /* Info.plist */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
 		0A020CB51D4F3AD800458BA3 /* Seasame */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				0A4815671D4C4BE100B35AA2 /* orangeLife */,
-				0A4815741D4C4BE100B35AA2 /* Assets.xcassets */,
 				0A4815811D4C4BE100B35AA2 /* orangeLifeTests */,
 				0A48158C1D4C4BE100B35AA2 /* orangeLifeUITests */,
 				0A4815661D4C4BE100B35AA2 /* Products */,
@@ -225,9 +217,15 @@
 				0AE0B7EC1D5429650043900A /* 购物 */,
 				0AE0B7E51D5414C10043900A /* 新闻 */,
 				0A020CB51D4F3AD800458BA3 /* Seasame */,
-				0A020C9D1D4F193800458BA3 /* Other */,
 				0A4815A21D4C543400B35AA2 /* Category */,
 				0A48159E1D4C536400B35AA2 /* Tools */,
+				0A4815A61D4C54D700B35AA2 /* Prefix-Header.h */,
+				0A2336971D503C4800E5833B /* Foundation+Log.m */,
+				0A48156B1D4C4BE100B35AA2 /* AppDelegate.h */,
+				0A48156C1D4C4BE100B35AA2 /* AppDelegate.m */,
+				0A4815761D4C4BE100B35AA2 /* LaunchScreen.storyboard */,
+				0A4815791D4C4BE100B35AA2 /* Info.plist */,
+				0A4815741D4C4BE100B35AA2 /* Assets.xcassets */,
 				0A4815681D4C4BE100B35AA2 /* Supporting Files */,
 			);
 			path = orangeLife;
@@ -334,6 +332,10 @@
 		0AE0B7F11D5429650043900A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A7497A71D62B4C000C0C348 /* HPLineView.h */,
+				0A7497A81D62B4C000C0C348 /* HPLineView.m */,
+				0A7497A91D62B4C000C0C348 /* HPTextField.h */,
+				0A7497AA1D62B4C000C0C348 /* HPTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -553,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A73D4A41D5DA1DB00F828D6 /* HPShopVC.m in Sources */,
+				0A7497AC1D62B4C000C0C348 /* HPTextField.m in Sources */,
 				0AE0B7E81D54180E0043900A /* HPNewsVC.m in Sources */,
 				0A4815A51D4C544B00B35AA2 /* UIView+HPExtension.m in Sources */,
 				0AE0B7EB1D541AD10043900A /* HPWebViewVC.m in Sources */,
@@ -567,6 +570,7 @@
 				0AE0B7E01D5412220043900A /* HPTabBarVC.mm in Sources */,
 				0A9BD2511D604E2D00D8AD25 /* HPNavigationVC.m in Sources */,
 				0ABF54A71D618DE800A34CB6 /* HPSesameVC.m in Sources */,
+				0A7497AB1D62B4C000C0C348 /* HPLineView.m in Sources */,
 				0A020CA01D4F2CEA00458BA3 /* HPHttpManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

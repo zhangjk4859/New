@@ -10,6 +10,12 @@
 //导入芝麻信用
 #import <ZMCreditSDK/ALCreditService.h>
 
+
+//验证码URL
+#define kVcodeURL   @"account/vcode.json"
+//定义延迟动作
+#define DelayExecute(delayTime,func) (dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{func;}))
+
 @interface HPAlipayCertifyVC ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cardTextField;
@@ -62,9 +68,9 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
    
-    //拿到accountID
-    HPLoginData *loginData = [HPUtils getLoginData];
-    self.accountId = loginData.accountId;
+//    //拿到accountID
+//    HPLoginData *loginData = [HPUtils getLoginData];
+//    self.accountId = loginData.accountId;
     
 }
 
@@ -170,7 +176,7 @@
     }else{//是手机号码就可以发送
         
         //发送验证码
-        [SVProgressHUD showWithStatus:@"准备发送中，请稍后" maskType:SVProgressHUDMaskTypeGradient];
+        [SVProgressHUD showInfoWithStatus:@"准备发送中，请稍后"];
         
         
         NSMutableDictionary *params = [HPUtils getBasicDictionary];
@@ -189,7 +195,12 @@
                 [self startCount];
             }else {//错误信息
                 NSString * errorMessage = responseObject[@"message"];
-                [SVProgressHUD showInfoWithStatus:errorMessage];
+                if (errorMessage == nil) {
+                    [SVProgressHUD showInfoWithStatus:@"操作有误，请重试"];
+                }else{
+                    
+                    
+                }
             }
             
         } failure:^(NSError *error) {
@@ -284,7 +295,7 @@
     //有验证码才能登陆
     if (self.codeTextField.text.length == 6) {
         
-        [SVProgressHUD showWithStatus:@"验证中，请稍后" maskType:SVProgressHUDMaskTypeNone];
+        [SVProgressHUD showWithStatus:@"验证中，请稍后"];
         
         NSMutableDictionary *params = [HPUtils getBasicDictionary];
         params[@"paramsType"] = @"1";
@@ -320,7 +331,6 @@
             [SVProgressHUD showErrorWithStatus:@"无网络连接,请检查后网络后再重试"];
           
             
-            
         }];
         
         
@@ -351,31 +361,15 @@
         NSInteger code = [responseObject[@"code"] integerValue];
         if (code == 0) {//授权成功
             NSString *message = responseObject[@"message"];
-            [SVProgressHUD showInfoWithStatus:message];
-            
-            
-            NSDictionary * data = responseObject[@"data"];
-            //建立一个模型存储数据
-            HPLoginData *loginData = [HPLoginData mj_objectWithKeyValues:data];
-            //模型转换成数据
-            NSData * loginDataBinary = [NSKeyedArchiver archivedDataWithRootObject: loginData];
-            
-            [HPUtils storeObjects:@[  responseObject[@"id"],
-                                      loginData.license,
-                                      loginDataBinary
-                                      ]
-                         withKeys:@[  kUserID,
-                                      kUserLicence,
-                                      kLoginData
-                                      ]];
-            
-            //发送一个通知给四个主界面登录成功
-            [[NSNotificationCenter defaultCenter] postNotificationName:kStartLoadDataNotifications object:nil];
-            
+            if (message == nil) {
+                [SVProgressHUD showInfoWithStatus:@"登录成功"];
+            }else{
+                
+                [SVProgressHUD showInfoWithStatus:message];
+            }
+
             //延迟一秒再消失
-            DelayExecute(1.0, [self dismissViewControllerAnimated:YES completion:nil];);
-            
-            
+            DelayExecute(1.0, [self.navigationController popViewControllerAnimated:YES];);
             
             
         }else if (code == 402){//芝麻信用服务器授权失败
@@ -402,34 +396,6 @@
 
 
 
-//原注册成功的代码处理逻辑
--(void)test
-{
-    //                [SVProgressHUD showInfoWithStatus:@"登录成功" maskType:SVProgressHUDMaskTypeBlack];
-    //                //登录成功存储信息，暂且和登录成功处理方式一样
-    //                NSDictionary * data = responseObject[@"data"];
-    //                //建立一个模型存储数据
-    //                HPLoginData *loginData = [HPLoginData mj_objectWithKeyValues:data];
-    //                //模型转换成数据
-    //                NSData * loginDataBinary = [NSKeyedArchiver archivedDataWithRootObject: loginData];
-    //
-    //                [HPUtils storeObjects:@[  responseObject[@"id"],
-    //                                          loginData.license,
-    //                                          loginDataBinary
-    //                                          ]
-    //                             withKeys:@[  kUserID,
-    //                                          kUserLicence,
-    //                                          kLoginData
-    //                                          ]];
-    //
-    //                //发送一个通知给四个主界面注册好并登录成功
-    //                [[NSNotificationCenter defaultCenter] postNotificationName:kStartLoadDataNotification object:nil];
-    //
-    //                //延迟一秒再消失
-    //                DelayExecute(1.0, [self dismissViewControllerAnimated:YES completion:nil];);
-}
-
-
 //当键盘出现或改变时调用
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
@@ -454,14 +420,12 @@
             self.view.y =  -(btnMaxY - keyboardY + 5);
         }];
         
-        
-    }
-    
+    }//end for if
     
     
 }
 
-//当键退出时调用
+//当键退出时视图归位
 - (void)keyboardWillHide:(NSNotification *)aNotification
 {
     [UIView animateWithDuration:self.aniTime animations:^{
