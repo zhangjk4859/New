@@ -55,6 +55,9 @@
     webView.scrollView.bounces = NO;
     //webView.delegate = self;
     self.webView = webView;
+    //加载网页
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
+    [self.webView loadRequest:request];
 }
 
 
@@ -89,8 +92,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
-    [self.webView loadRequest:request];
+    
     
 }
 
