@@ -7,6 +7,8 @@
 //
 
 #import "HPAlipayCertifyVC.h"
+#import "HPAgreenmentVC.h"
+#import "HPSingleNavController.h"
 //导入芝麻信用
 #import <ZMCreditSDK/ALCreditService.h>
 
@@ -277,11 +279,11 @@
 //同意账户服务协议点击
 - (IBAction)agreenmentClick:(UIButton *)sender {
    
-//    HPAgreenmentVC *agreenVC = [[HPAgreenmentVC alloc]init];
-//    agreenVC.code = @"agreement_reg";//注册协议
-//    HPSingleNavController *nav = [[HPSingleNavController alloc]initWithRootViewController:agreenVC];
-//    
-//    [self presentViewController:nav animated:YES completion:nil];
+    HPAgreenmentVC *agreenVC = [[HPAgreenmentVC alloc]init];
+    agreenVC.code = @"agreement_reg";//注册协议
+    HPSingleNavController *nav = [[HPSingleNavController alloc]initWithRootViewController:agreenVC];
+    
+    [self presentViewController:nav animated:YES completion:nil];
     
     
 }

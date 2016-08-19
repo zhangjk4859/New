@@ -63,9 +63,10 @@
 //#define shopURL @"http://m.baidu.com/"
 
 //定义URL
-#define kBaseURL       @"http://mobile.yuyanzhe.me/"  //正式环境
-#define kZMParamsURL   @"zmxy/prames.json"            //芝麻信用参数加密处理
-#define kZMSubmitURL   @"zmxy/submit"                 //授权登录
+#define kBaseURL        @"http://mobile.yuyanzhe.me/"  //正式环境
+#define kZMParamsURL    @"zmxy/prames.json"            //芝麻信用参数加密处理
+#define kZMSubmitURL    @"zmxy/submit"                 //授权登录
+#define kAgreementURL   @"app/agreement.json"         //隐私权政策
 
 //屏幕高度
 #define  JKScreenW  [UIScreen mainScreen].bounds.size.width

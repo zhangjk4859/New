@@ -23,6 +23,8 @@
 		0A020CC91D4F40AD00458BA3 /* ZMDependUponSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A020CC81D4F40AD00458BA3 /* ZMDependUponSDK.framework */; };
 		0A020CCB1D4F416500458BA3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A020CCA1D4F416500458BA3 /* Security.framework */; };
 		0A2336981D503C4800E5833B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2336971D503C4800E5833B /* Foundation+Log.m */; };
+		0A44D0E61D6691C1000B84B4 /* HPAgreenmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44D0E51D6691C1000B84B4 /* HPAgreenmentVC.m */; };
+		0A44D0E91D669409000B84B4 /* HPSingleNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44D0E81D669409000B84B4 /* HPSingleNavController.m */; };
 		0A48156A1D4C4BE100B35AA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4815691D4C4BE100B35AA2 /* main.m */; };
 		0A48156D1D4C4BE100B35AA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A48156C1D4C4BE100B35AA2 /* AppDelegate.m */; };
 		0A4815751D4C4BE100B35AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4815741D4C4BE100B35AA2 /* Assets.xcassets */; };
@@ -85,6 +87,10 @@
 		0A020CC81D4F40AD00458BA3 /* ZMDependUponSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZMDependUponSDK.framework; sourceTree = "<group>"; };
 		0A020CCA1D4F416500458BA3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0A2336971D503C4800E5833B /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		0A44D0E41D6691C1000B84B4 /* HPAgreenmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAgreenmentVC.h; sourceTree = "<group>"; };
+		0A44D0E51D6691C1000B84B4 /* HPAgreenmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAgreenmentVC.m; sourceTree = "<group>"; };
+		0A44D0E71D669409000B84B4 /* HPSingleNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSingleNavController.h; sourceTree = "<group>"; };
+		0A44D0E81D669409000B84B4 /* HPSingleNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSingleNavController.m; sourceTree = "<group>"; };
 		0A4815651D4C4BE100B35AA2 /* orangeLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orangeLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4815691D4C4BE100B35AA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A48156B1D4C4BE100B35AA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -323,6 +329,10 @@
 				0ABF54B11D61DC0C00A34CB6 /* HPAlipayCertifyVC.h */,
 				0ABF54B21D61DC0C00A34CB6 /* HPAlipayCertifyVC.m */,
 				0ABF54B31D61DC0C00A34CB6 /* HPAlipayCertifyVC.xib */,
+				0A44D0E41D6691C1000B84B4 /* HPAgreenmentVC.h */,
+				0A44D0E51D6691C1000B84B4 /* HPAgreenmentVC.m */,
+				0A44D0E71D669409000B84B4 /* HPSingleNavController.h */,
+				0A44D0E81D669409000B84B4 /* HPSingleNavController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -572,7 +582,9 @@
 				0ABF54B41D61DC0C00A34CB6 /* HPAlipayCertifyVC.m in Sources */,
 				0AEB624F1D51F60A00B38A29 /* UIBarButtonItem+HPExtension.m in Sources */,
 				0A48156A1D4C4BE100B35AA2 /* main.m in Sources */,
+				0A44D0E91D669409000B84B4 /* HPSingleNavController.m in Sources */,
 				0A2336981D503C4800E5833B /* Foundation+Log.m in Sources */,
+				0A44D0E61D6691C1000B84B4 /* HPAgreenmentVC.m in Sources */,
 				0A4815A11D4C538400B35AA2 /* HPConst.m in Sources */,
 				0A4E35871D506F8800E195C4 /* HPUtils.m in Sources */,
 				0A73D4A71D5DB8B900F828D6 /* HPProgressView.m in Sources */,
