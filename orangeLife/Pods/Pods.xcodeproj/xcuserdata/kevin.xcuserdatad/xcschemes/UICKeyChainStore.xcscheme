@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '171DDB045DCB4635861AAF6E'
-               BlueprintName = 'UICKeyChainStore'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'UICKeyChainStore.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E410BC792ECEB1F548F1C7E495FED06"
+               BlueprintName = "UICKeyChainStore"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "UICKeyChainStore.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

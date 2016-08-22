@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '557B549FFC629237ED3EF666'
-               BlueprintName = 'FCUUID'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FCUUID.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "65DC4EFC8ACEF3A1A67B1FCADCAFE175"
+               BlueprintName = "FCUUID"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FCUUID.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
