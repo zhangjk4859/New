@@ -57,6 +57,10 @@
     self.webView = webView;
     //加载网页
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:shopURL]];
+    
+    //NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
     [self.webView loadRequest:request];
 }
 
@@ -77,6 +81,8 @@
     //4.4.JS调用OC的方法
     [_bridge registerHandler:@"zjk" handler:^(id data, WVJBResponseCallback responseCallback) {
         
+        
+        //JKLog(@"----------JS调用成功");
         
         HPAlipayCertifyVC *aliVC = [HPAlipayCertifyVC new];
         [self.navigationController pushViewController:aliVC animated:YES];

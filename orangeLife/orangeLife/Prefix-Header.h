@@ -59,6 +59,7 @@
 //随机色
 #define JKRandomColor JKRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 //购物网址
+//#define shopURL @"http://localhost:8080/juzi/mobile/"
 #define shopURL @"http://192.168.0.120/juzi/mobile/"
 //#define shopURL @"http://m.baidu.com/"
 
